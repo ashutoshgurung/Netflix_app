@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:netflix_app/login/signin/signin.dart';
 import 'package:netflix_app/main_screen/netflix_home.dart';
 import 'package:netflix_app/main_screen/search_screen.dart';
 import 'package:netflix_app/screens/detail_screen.dart';

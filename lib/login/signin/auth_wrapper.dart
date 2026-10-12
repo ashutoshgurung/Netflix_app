@@ -50,7 +50,7 @@ class AuthWrapper extends StatelessWidget {
         if (snapshot.hasData) {
           return const Navigationscreen();
         } else {
-          return const CreateOrLogin();
+          return const Navigationscreen();
         }
       },
     );

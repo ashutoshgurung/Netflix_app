@@ -2,6 +2,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:netflix_app/provider/detail_screen_provider.dart';
+import 'package:netflix_app/provider/movies_provider.dart';
 import 'package:provider/provider.dart';
 import 'package:netflix_app/firebase_options.dart';
 import 'package:netflix_app/routes/app_routes.dart';
@@ -22,11 +23,12 @@ class MyApp extends StatelessWidget {
       providers: [
         ChangeNotifierProvider(create: (_) => SearchProvider()),
         ChangeNotifierProvider(create: (_) => DetailScreenProvider()),
+        ChangeNotifierProvider(create: (_) => MoviesProvider()..getTrailers()),
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'Netflix Clone',
-        initialRoute: AppRoutes.splash,
+        initialRoute: AppRoutes.home,
         routes: AppRoutes.routes,
         theme: ThemeData(
           scaffoldBackgroundColor: Colors.black,
